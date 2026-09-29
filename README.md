@@ -56,7 +56,6 @@ Bot: 📊 Ringkasan September 2026
 | C | Kategori |
 | D | Nominal |
 | E | Keterangan |
-| F | Bulan-ThisYear
 
 Sheet name: `Spend - In` (bisa diubah di variabel `sheetName`)
 
@@ -115,15 +114,15 @@ Sheet name: `Spend - In` (bisa diubah di variabel `sheetName`)
     'masker', 'vaksin', 'cek lab', 'kesehatan',
   ]
   <br>
-  Uang Saku= ['uang saku', 'kiriman', 'sangu', 'uang bulanan', 'uang mingguan']
+  ### Uang Saku= ['uang saku', 'kiriman', 'sangu', 'uang bulanan', 'uang mingguan']
   <br>
-  Gaji= ['gaji']
+  ### Gaji= ['gaji']
   <br>
-  Bonus= ['bonus','thr']
+  ### Bonus= ['bonus','thr']
   <br>
-  Investasi= ['investasi', 'saham', 'crypto', 'deposito', 'reksadana']
+  ### Investasi= ['investasi', 'saham', 'crypto', 'deposito', 'reksadana']
   <br>
-  Penjualan= ['jual', 'penjualan', 'omset'],
+  ### Penjualan= ['jual', 'penjualan', 'omset'],
 }; 
 ### diatas adalah keyword-keyword yang harus ada dalam keterangan message kalian agar bot dapat mengategorikan.
 
@@ -151,6 +150,6 @@ Sheet name: `Spend - In` (bisa diubah di variabel `sheetName`)
 - Telegram Bot API
 - Google Sheets
 
-## Tutorial Setup bisa buka di [youtube gua]().
+## Tutorial Setup bisa buka di [youtube gua](https://www.youtube.com/@nichootak).
 
 Support Me [Link Saweria](https://saweria.co/nichootak).
