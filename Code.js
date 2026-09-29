@@ -85,6 +85,9 @@ function initializeHeader() {
     .setBackground("#808080")
     .setHorizontalAlignment("center")
     .setBorder(true, true, true, true, true, true, '#000000', SpreadsheetApp.BorderStyle.SOLID);
+
+    sheet.getRange('A:B').setNumberFormat('yyyy-mm-dd hh:mm:ss');
+    sheet.getRange('G:H').setNumberFormat('0');
                    
     Logger.log("Headers initialized successfully with 2-column wide layout.");
   } 
@@ -302,10 +305,12 @@ function saveTransaction(data) {
  
  const lastRow = sheet.getLastRow() + 1;
 
-  sheet.getRange(lastRow, 1).setValue(data.tanggal);
+  sheet.getRange(lastRow, 1).setValue(new Date(data.tanggal));
+  sheet.getRange(lastRow, 1).setNumberFormat('yyyy-mm-dd hh:mm:ss');
   sheet.getRange(lastRow, 3).setValue(data.jenis);
   sheet.getRange(lastRow, 5).setValue(data.kategori);
-  sheet.getRange(lastRow, 7).setValue(data.nominal);
+  sheet.getRange(lastRow, 7).setValue(Number(data.nominal));
+  sheet.getRange(lastRow, 7).setNumberFormat('0');
   sheet.getRange(lastRow, 9).setValue(data.keterangan);
 
   sheet.getRange(lastRow, 1, 1, 2).merge();
